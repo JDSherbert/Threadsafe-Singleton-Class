@@ -29,7 +29,7 @@ public:
 
             // Check if another thread has already created an instance while waiting for the lock
             if (instance == nullptr) 
-	    	{
+	    {
                 instance = new Singleton();
             }
         }
