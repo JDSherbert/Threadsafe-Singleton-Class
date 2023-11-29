@@ -24,7 +24,11 @@
 
 -----------------------------------------------------------------------
 ## Overview
-Some words about the project here-
+
+Creating a thread-safe singleton in C++ requires handling the potential race conditions that can occur when multiple threads attempt to access the singleton instance concurrently. One common approach is to use the double-checked locking pattern. 
+This example uses the mutex functions from the mutex library.
+
+Please note that in modern C++, you can use C++11's std::call_once with a std::once_flag instead of manually managing a mutex. This is generally considered a safer and more convenient option. However, the above example demonstrates the basic concept of thread safety in a singleton.
 
 
 -----------------------------------------------------------------------
