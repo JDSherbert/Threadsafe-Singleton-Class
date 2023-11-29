@@ -22,13 +22,13 @@ public:
     static Singleton& GetInstance() 
     {
         if (instance == nullptr) 
-		{
+	{
             // Lock to prevent multiple threads from creating instances
             std::lock_guard<std::mutex> lock(instanceMutex);
 
             // Check if another thread has already created an instance while waiting for the lock
             if (instance == nullptr) 
-			{
+	    {
                 instance = new Singleton();
             }
         }
