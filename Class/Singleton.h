@@ -19,6 +19,7 @@ class Singleton
 {
 public:
 
+    // Get a reference to the singleton, rather than a copy
     static Singleton& GetInstance() 
     {
         if (instance == nullptr) 
@@ -28,7 +29,7 @@ public:
 
             // Check if another thread has already created an instance while waiting for the lock
             if (instance == nullptr) 
-	    {
+	    	{
                 instance = new Singleton();
             }
         }
